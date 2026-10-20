@@ -1,7 +1,7 @@
 window.RC = {
   config: {
     // Cédulas con acceso al panel municipal (DEMO: en producción el rol viene del servidor).
-    adminCedulas: ["0704376722"],
+    adminCedulas: ["0202242145"],
     // URL de tu backend que verifica fotos con IA (ver README). Vacío = verificación local básica.
     verifyEndpoint: ""
   },
