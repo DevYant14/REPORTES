@@ -1,0 +1,34 @@
+/* Componentes al estilo shadcn/ui (misma anatomía que Button, Card, Badge, Input, Tabs, Alert). */
+*{box-sizing:border-box}
+body{margin:0;background:hsl(var(--background));color:hsl(var(--foreground));font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;height:2.5rem;padding:0 1rem;border-radius:calc(var(--radius) - 2px);border:1px solid transparent;background:hsl(var(--primary));color:hsl(var(--primary-foreground));font:inherit;font-weight:500;cursor:pointer;transition:opacity .15s}
+.btn:hover{opacity:.9}.btn:disabled{opacity:.5;pointer-events:none}
+.btn-outline{background:transparent;color:hsl(var(--foreground));border-color:hsl(var(--input))}
+.btn-outline:hover{background:hsl(var(--muted));opacity:1}
+.btn-sm{height:2rem;padding:0 .75rem;font-size:13px}
+:focus-visible{outline:2px solid hsl(var(--ring));outline-offset:2px}
+.card{background:hsl(var(--card));color:hsl(var(--card-foreground));border:1px solid hsl(var(--border));border-radius:var(--radius)}
+.card-header{padding:1.25rem 1.25rem 0}.card-title{margin:0;font-size:1.05rem;font-weight:600;letter-spacing:-.01em}
+.card-desc{margin:.25rem 0 0;color:hsl(var(--muted-foreground));font-size:14px}
+.card-body{padding:1.25rem}
+.label{display:block;margin:1rem 0 .4rem;font-size:14px;font-weight:500}
+.input,.select,.textarea{width:100%;min-height:2.5rem;padding:.5rem .75rem;border:1px solid hsl(var(--input));border-radius:calc(var(--radius) - 2px);background:transparent;color:inherit;font:inherit}
+.textarea{resize:vertical}.hint{margin:.35rem 0 0;font-size:13px;color:hsl(var(--muted-foreground))}
+.badge{display:inline-flex;align-items:center;gap:.3rem;padding:.1rem .6rem;border-radius:999px;border:1px solid hsl(var(--border));font-size:12px;font-weight:600;color:var(--c,hsl(var(--foreground)))}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.tabs{display:inline-flex;gap:2px;padding:3px;border-radius:var(--radius);background:hsl(var(--muted));margin-bottom:1rem;flex-wrap:wrap}
+.tab{border:0;background:transparent;color:hsl(var(--muted-foreground));padding:.4rem .9rem;border-radius:calc(var(--radius) - 3px);font:inherit;font-size:14px;font-weight:500;cursor:pointer}
+.tab[aria-selected="true"]{background:hsl(var(--background));color:hsl(var(--foreground));box-shadow:0 1px 2px hsl(0 0% 0%/.12)}
+.alert{display:flex;gap:.6rem;padding:.75rem 1rem;border:1px solid hsl(var(--border));border-radius:var(--radius);font-size:14px;margin-top:1rem}
+.alert-error{color:hsl(var(--destructive));border-color:hsl(var(--destructive)/.4)}
+.alert-ok{color:hsl(var(--success));border-color:hsl(var(--success)/.4)}
+.alert-info{color:hsl(var(--muted-foreground))}
+/* Timeline de estados (patrón "stepper" de 21st.dev) */
+.stepper{display:flex;margin:1rem 0 .25rem}
+.step{flex:1;position:relative;text-align:center;font-size:12px;color:hsl(var(--muted-foreground))}
+.step::before{content:"";display:block;width:14px;height:14px;margin:0 auto 6px;border-radius:50%;border:2px solid hsl(var(--border));background:hsl(var(--background));position:relative;z-index:1}
+.step::after{content:"";position:absolute;top:6px;left:-50%;width:100%;height:2px;background:hsl(var(--border))}
+.step:first-child::after{display:none}
+.step.done{color:hsl(var(--foreground))}
+.step.done::before{background:hsl(var(--primary));border-color:hsl(var(--primary))}
+.step.done::after{background:hsl(var(--primary))}
