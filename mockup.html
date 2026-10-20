@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mockup 1 · Reporta tu Ciudad</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar"><span class="brand">Mockup 1 · Pantallas principales</span><a class="btn btn-outline btn-sm" href="index.html">Abrir la app</a></header>
+  <div class="mock-grid">
+    <section><h2>1. Ingreso con cédula</h2><div class="card"><div class="card-header"><p class="card-title">Entra para reportar</p><p class="card-desc">Usa tu cédula y una contraseña.</p></div><div class="card-body">
+      <label class="label">Cédula</label><input class="input" value="1712345678" readonly>
+      <label class="label">Contraseña</label><input class="input" type="password" value="••••••••••" readonly>
+      <div class="row" style="margin-top:1.25rem"><button class="btn">Ingresar</button><button class="btn btn-outline">Crear cuenta</button></div></div></div></section>
+
+    <section><h2>2. Nuevo reporte con verificación</h2><div class="card"><div class="card-header"><p class="card-title">Reportar un problema</p><p class="card-desc">Sube una foto real tomada en el lugar.</p></div><div class="card-body">
+      <label class="label">Tipo de problema</label><select class="select"><option>Bache o vía dañada</option></select>
+      <label class="label">Dónde está</label><input class="input" value="Av. Guayaquil y Sucre" readonly>
+      <label class="label">Foto del daño</label><div class="card empty" style="padding:1.2rem">bache.jpg</div>
+      <div class="alert alert-ok">Foto verificada. Lista para enviar.</div>
+      <div class="row" style="margin-top:1rem"><button class="btn">Verificar y enviar reporte</button></div></div></div></section>
+
+    <section><h2>3. Seguimiento del ciudadano</h2><article class="card report"><div style="width:7rem;height:7rem;border-radius:8px;background:hsl(var(--muted))"></div><div>
+      <h3>Bache o vía dañada</h3><p class="muted" style="margin:.1rem 0 .5rem">Av. Guayaquil y Sucre · 20/10/2026</p>
+      <div class="row"><span class="badge" style="--c:hsl(var(--warning))">En reparación</span><span class="badge" style="--c:hsl(var(--success))">Foto verificada</span></div></div>
+      <div style="grid-column:1/-1"><div class="stepper"><div class="step done">Enviado</div><div class="step done">Leído</div><div class="step done">En reparación</div><div class="step">Arreglado</div></div></div></article></section>
+
+    <section><h2>4. Panel municipal</h2><article class="card report"><div style="width:7rem;height:7rem;border-radius:8px;background:hsl(var(--muted))"></div><div>
+      <h3>Alumbrado público</h3><p class="muted" style="margin:.1rem 0 .5rem">Calle Bolívar · 19/10/2026</p>
+      <div class="row"><span class="badge" style="--c:hsl(var(--info))">Leído</span><span class="badge" style="--c:hsl(var(--warning))">Foto por revisar</span></div></div>
+      <div style="grid-column:1/-1"><label class="label">Cambiar estado</label><select class="select"><option>Leído</option></select></div></article></section>
+  </div>
+</body>
+</html>
